@@ -1,0 +1,8 @@
+[Unit]
+Description=ffmpeg-camera
+
+[Service]
+ExecStart=/bin/sh /root/website/run2.sh
+
+[Install]
+WantedBy=multi-user.target

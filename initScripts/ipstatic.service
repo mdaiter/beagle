@@ -1,0 +1,8 @@
+[Unit]
+Description=ipstatic
+
+[Service]
+ExecStart=/bin/bash /root/website/startup_server.sh
+
+[Install]
+WantedBy=multi-user.target

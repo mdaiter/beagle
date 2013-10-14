@@ -1,0 +1,7 @@
+[Unit]
+Description=server-stream
+
+[Service]
+ExecStart=/usr/bin/node /root/website/stream-server.js
+[Install]
+WantedBy=multi-user.target
