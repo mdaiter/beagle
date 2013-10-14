@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            @font-face{
+              font-family: fenwick-olden;
+              src:url('fonts/fenwick_olden.ttf');
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MIT City Farm</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="background-image:url('img/plant.jpg'); background-size:100% 100%;">
+      <div class="container">
+        <h1 style="color: #00AF33; font-family: fenwick-olden;">MIT City Farm</h1>
+        <p style="color: #00AF33; font-family: fenwick-olden;">We grow stuff! Don't believe us? Watch below!</p>
+       	<canvas id="videoCanvas" width="320" height="240">
+			<p>
+				Please use a browser that supports the Canvas Element, like
+				<a href="http://www.google.com/chrome">Chrome</a>,
+				<a href="http://www.mozilla.com/firefox/">Firefox</a>,
+				<a href="http://www.apple.com/safari/">Safari</a> or Internet 	Explorer 10
+			</p>
+		</canvas>
+		<script type="text/javascript" src="jsmpg.js"></script>
+		<script type="text/javascript">
+			// Show loading notice
+			var canvas = document.getElementById('videoCanvas');
+			var ctx = canvas.getContext('2d');
+			ctx.fillStyle = '#444';
+			ctx.fillText('Loading...', canvas.width/2-30, canvas.height/3);
+
+			// Setup the WebSocket connection and start the player
+			var client = new WebSocket( 'ws://mitcityfarm.media.mit.edu:8084/' );
+			var player = new jsmpeg(client, {canvas:canvas});
+		</script>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <h1 style="font-family: fenwick-olden;">Current Goals</h1>
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>Plant cloning</h3>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Heading</h3>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+       </div>
+        <div class="col-lg-4">
+          <h3>Heading</h3>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+      </div>
+      <h1 style="font-family: fenwick-olden;">Current Researchers</h1>
+        <div class="row">
+          <div class="col-lg-4">
+            <h3>
+              <a href="http://www.linkedin.com/profile/view?id=52706066&authType=OPENLINK&authToken=XOre&locale=en_US&srchid=1546504581381079603186&srchindex=1&srchtotal=13&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A1546504581381079603186%2CVSRPtargetId%3A52706066%2CVSRPcmpt%3Aprimary">
+                Caleb Harper
+              </a>
+            </h3>
+            <p> Caleb is currently an urban food systems researcher 
+            and writing his masters thesis on the subject of High-density 
+            / Low-income housing in developing countries at the MIT School 
+            of Architecture and the MIT Media Lab. </p>
+            <br>
+            <p> Through thoughtful analysis, design and synthesis of housing, 
+            health, food, economics and locale, Caleb is part of a new generation 
+            of multi-faceted thought leaders offering nuanced solutions for urban 
+            development in a global context. Caleb has worked professionally and 
+            academically in the research and implementation of domestic projects 
+            in Texas, Nevada, Florida and Massachusetts as well as internationally 
+            in The United Kingdom, Ecuador, Japan, Singapore, Argentina, Brazil and India.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <h3>
+              <a href="http://www.linkedin.com/profile/view?id=161894843&authType=NAME_SEARCH&authToken=G20o&locale=en_US&srchid=1546504581381079554901&srchindex=3&srchtotal=4&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A1546504581381079554901%2CVSRPtargetId%3A161894843%2CVSRPcmpt%3Aprimary">
+                Emma Feshbach
+              </a>
+            </h3>
+            <p> </p>
+          </div>
+          <div class="col-lg-4">
+            <h3>
+              <a href="">
+                 Sophia M Jaffe
+              </a>
+            </h3>
+            <p></p>
+          </div>
+          <div class="col-lg-4">
+            <h3>
+              <a href="">
+                Preethi Vaidyanathan
+              </a>
+            </h3>
+            <p></p>
+          </div>
+          <div class="col-lg-4">
+            <h3>
+              <a href="">
+                 Elaine Kung
+              </a>
+            </h3>
+            <p></p>
+          </div>
+          <div class="col-lg-4">
+            <h3>
+              <a href="">
+                 Camille Richwoman
+              </a>
+            </h3>
+            <p></p>
+          </div>
+      </div>
+      <hr>
+      <footer>
+        <a href="http://media.mit.edu">&copy; MIT Media Lab 2013</a>
+      </footer>
+     <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
