@@ -1,0 +1,8 @@
+[Unit]
+Description=stream
+
+[Service]
+ExecStart=/bin/bash /root/website/boneCV/streamVideoUDP
+
+[Install]
+WantedBy=multi-user.target

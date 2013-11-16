@@ -1,0 +1,4 @@
+address=18.85.32.9
+netmask=24
+broadcast=18.85.32.255
+gateway=18.85.32.1
